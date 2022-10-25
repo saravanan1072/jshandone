@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ITERATION STATEMENTS</h1>
+    <h3>1.Take a number from the user and print the count of digits in that number.</h3>
+    <pre>const Find_Digits = (N) => 
+        {
+             var count=0;
+             var i=1;
+            
+             while(N!=0)
+             {
+               N= parseInt(N/10);
+               count++;
+               i++;
+             
+             }
+        
+             return count;
+             //return count;
+             
+        };
+        </pre>
+    <h3>2.Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number.</h3>
+        <pre>const Find_Five = (N) => 
+            {
+              var a;
+              var count=0;
+            
+              while(N!=0)
+              {
+                a=N%10;
+                N=parseInt(N/10);
+                if(a==5)
+                {
+                  count++;
+                }
+              }
+                 return count;
+            };
+            
+            </pre>
+    <h3>3.You are given an integer N , and your task is to find the sum of all the even integers starting from  1  upto  N  ( N  inclusive).</h3>
+
+            <pre>const findSum = (n) => {
+
+    
+    
+                let sum=0;
+                for(let i=1;i<=n;i++)
+                {
+                  if(i%2==0)
+                  {
+                    sum=sum+i;
+                  }
+                }
+                return sum;
+                
+            };
+            
+            </pre>
+    <h3>4.Write a program that takes a number from the user and get the sum of the digits present in the number.</h3>
+    <pre>{
+        var a;
+        var sum=0;
+          while(N!=0)
+          {
+            a=N%10;
+            N=parseInt(N/10);
+            sum=sum+a;
+          }
+          return sum;
+      };
+      
+      </pre>
+      <h3>5.Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first.</h3>
+      <pre>const Print_Odd = (N) => 
+        {
+          
+            for(let i=2;i<=N;i++)
+            {
+              if(i%2!=0 || i==2 )
+              {
+                console.log(i);
+              }
+            }
+        };
+        </pre>
+    <h3>6.Write a program which ask user for no of lines and print a pattern using an asterik .</h3>
+    <pre>const Print_pattern = (N) => 
+        {
+          let string=" ";
+        
+          <!-- for(let i=1;i<  =N;i++) -->
+          {
+            <!-- for(let j=0;j <i;j++) -->
+            {
+            string += "*";
+           
+            }
+             string += "\n";
+             
+          }
+           console.log(string);
+        
+          
+        };
+        
+    </pre>
+    <h3>7.Write a program which takes  a number from user and check whether number is prime number or not a prime number.</h3>
+    <pre>
+        const Prime_Check = (N) => 
+        {
+             
+            var count=0;
+            for(let i=1;i<=N;i++)
+            {
+              if(N%i==0 )
+              {
+                count++;
+              }
+            }
+            if (count==2)
+            {
+              return "YES";
+              
+            }
+            else{
+              return "NO";
+            }
+        };
+        
+        </pre>
+    <h3>8.You are given an integer N , and your task is to print all the integers starting from  1 till N(N  inclusive).</h3>
+    <pre>const printNumbers = (n) => {
+        var string="";
+         for(let i=1;i<=n;i++)
+         {
+            string +=i+" ";
+         }
+         console.log(string);
+      };
+      
+      </pre>
+      <h3>9.Write a program which takes a number from user and print the table.</h3>
+      <pre>const Print_Table = (N) => 
+        {
+          
+          for(var i=1;i<=10;i++)
+          {
+             console.log( N +" * "+i+" = "+i*N);
+           
+          }
+        
+        };
+        
+        </pre>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
