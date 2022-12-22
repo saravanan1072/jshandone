@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promises</h1>
+    <h2>Q.1 Write one example explaining how you can write a callback function ? </h2>
+    <p> ANSWER : <pre> function mainFunction(name,call){
+        console.log(` ${name} and ${call} `);
+    
+    }
+    function call(a,b){
+        return a+b;
+    
+    }
+    mainFunction("sara",call(10,20)) </pre>  
+the function with pass the arugument as a another function
+
+    <h2>Q.2 "Write callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+
+        Explain callback hell.
+        Numbers
+        1
+        2
+        3
+        4
+        5
+        6
+        7"																									 </h2>
+<pre>ANSWER :    function printValue() {
+    let count=1;
+   
+    setTimeout(()=>{
+     console.log(count++);
+     setTimeout(()=>{
+     console.log(count++);
+     setTimeout(()=>{
+     console.log(count++);
+     setTimeout(()=>{
+     console.log(count++);
+     setTimeout(()=>{
+     console.log(count++);
+     setTimeout(()=>{
+     console.log(count++);
+   setTimeout(()=>{
+     console.log(count++);
+    },7000);
+   
+    },6000);
+    },5000);  
+    },4000);
+    },3000);
+    },2000);
+    },1000);
+   
+ }
+  printValue();
+     </pre>
+    <h2>Q.3 "Write promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+
+        Numbers
+        1
+        2
+        3
+        4
+        5
+        6
+        7"																									 </h2>
+<pre>ANSWER : 
+    let promise=new Promise((resolve,reject)=>{
+        let count=1;
+        resolve(count);
+       })
+       promise
+       .then((res)=>{
+        console.log(res++);
+        return res;
+        })
+        .then((res)=>{
+            return new Promise((resolve,rej)=>{
+                setTimeout(()=>{
+                    console.log(res++);
+                    resolve(res);
+                    //return res;
+                },2000)
+            })
+    
+       
+        })
+        .then((res)=>{
+            return new Promise((resolve,rej)=>{
+                setTimeout(()=>{
+                    console.log(res++);
+                    resolve(res);
+                },3000)
+            })
+    
+       
+        })
+        .then((res)=>{
+            return new Promise((resolve,rej)=>{
+                setTimeout(()=>{
+                    console.log(res++);
+                    resolve(res);
+                },4000)
+            })
+    
+       
+        })
+        .then((res)=>{
+            return new Promise((resolve,rej)=>{
+                setTimeout(()=>{
+                    console.log(res++);
+                    resolve(res);
+                },5000)
+            })
+    
+       
+        })
+        .then((res)=>{
+            return new Promise((resolve,rej)=>{
+                setTimeout(()=>{
+                    console.log(res++);
+                    resolve(res);
+                },6000)
+            })
+    
+       
+        })
+        .then((res)=>{
+            return new Promise((resolve,rej)=>{
+                setTimeout(()=>{
+                    console.log(res++);
+                    resolve(res);
+                },7000)
+            })
+    
+       
+        })
+    
+</pre>
+    <h2>Q.4  Create a promise function accepting a argument, if yes is passed to the function then it should go to resolved state and print Promise Resolved, and if nothing is passed then it should go to reject state and catch the error and print Promise Rejected </h2>
+<pre>ANSWER : 
+    
+   let promise=new Promise((resolve,reject)=>{
+    let count=10;
+    if(count===10){
+        resolve(count);
+    }
+    else{
+        reject()
+    }
+   
+   })
+   promise
+   .then((count)=>{
+    console.log("promises resolved");
+   })
+   .catch(()=>{
+    console.log("promises rejected");
+   })
+
+
+</pre>
+    <h2>Q.5 Create examples to explain callback function																									 </h2>
+
+    <p> ANSWER : <pre> function mainFunction(name,call){
+        console.log(` ${name} and ${call} `);
+    
+    }
+    function call(a,b){
+        return a+b;
+    
+    }
+    mainFunction("sara",call(10,20)) </pre>  
+the function with pass the arugument as a another function </p>
+    <h2>Q.6 Create examples to explain callback hell function </h2>
+    <p>ANSWER : <pre>
+        function printValue() {
+            let count=1;
+           
+            setTimeout(()=>{
+             console.log(count++);
+             setTimeout(()=>{
+             console.log(count++);
+             setTimeout(()=>{
+             console.log(count++);
+             setTimeout(()=>{
+             console.log(count++);
+            },4000);
+            },3000);
+            },2000);
+            },1000);
+           
+         }
+          printValue();
+    </pre>
+A collection of callBack function is called a callBack Hell .</p>
+
+    <h2>Q.7 Create examples to explain async await function </h2>
+    <p>ANSWER : <pre>
+        async function x(){
+            console.log("print  second me");
+             }
+         async function y(){
+             console.log("print first me");
+             await x();
+             console.log("print third me");
+         }
+         y();
+    </pre>
+
+    async- whenevr a function is started with a keyword async,it gives us a "promise" in return
+    "await"- is always used async function only .just await can be used.Await basically helps to wait for 
+ the particular task to finish and then moves to the next line of the code.</p>
+
+    <h2>Q.8 Create examples to explain promise.all function </h2>
+    <p>ANSWER: <pre>
+        let promise=new Promise((resolve,reject)=>{
+            let count=10;
+            if(count===10){
+                resolve(count);
+            }
+            else{
+                reject()
+            }
+           
+           })
+           promise
+           .then((count)=>{
+            console.log("promises resolved");
+           })
+           .catch(()=>{
+            console.log("promises rejected");
+           })
+           .finally(()=>{
+            console.log("end of promises");
+           })
+    </pre>
+THEN -> if a promise is resolved then it enter into a then function.
+CATCH -> if a promise is rejected then it enter into a catch function.
+FINALLY-> if a promise is resolved or rejected then it enter into a catch function
+</p>
+
+
+</body>
+</html>
