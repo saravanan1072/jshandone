@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dom.css">
+
+
+</head>
+<body>
+    <h1>DOCUMENT OBJECT MODEL</h1>
+
+<h2>Q.1 Write the code to access element which is having id as "text"</h2>
+<p id="text"></p>  
+
+<h2>Q.2 Write the code to access element which is having tag as "h1"</h2>
+<h3>hello, welcome to prepbytes</h3>
+<h2>Q.3 Write the code to access element which is having class as "box"
+   </h2>
+<div class="box">my class name was box</div>
+  <h1 id="change">Hello </h1>
+<h2>Q.4 Change the heading from ""Hello"" to ""Hello World"" using DOM functions" </h2>
+<p id="hello">Hello</p>
+<button onclick="textchane()">click me</button>
+
+<h2>Q.5Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.
+    </h2>
+
+
+    <div class="flex">
+        <div class="child">Welcome</div>
+        <div class="child">To</div>
+        <div class="child">Prepbytes</div>
+
+    </div>
+    <button onclick="change()">Change Flex Direction</button>
+
+<h2>Q.6 What’s the difference between window vs document?</h2>
+<p>ANSWER : 
+    WINDOW-> window is the top most object of DOM hierarchy. it represent a browser or frame that display the contents of web page.
+<br>
+DOCUMENT-> document object represent the a wen page that is loaded in the browser.by accessing the document object we can acess the element in HTML page.
+
+</p>
+<h2>Q.7 Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"
+</h2>
+<h1 id="heading">Hello </h1>
+<button onclick="stylee()">click me</button>
+<h2>Q.8 Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"
+</h2>
+<p>Hello World</p>
+<button onclick="reply()">Replace text</button>
+<h2>Q.9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+</h2>
+<div id="time">
+    <span class="hour"></span>:<span class="minute"></span>:<span class="second"></span>
+</div>
+<h2>Q.10 Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected
+</h2> 
+<div>select a year : 
+    <select name="dropdown" id="box">
+        <option value="2020-2021">2020-2021</option>
+        <option value="2021-2022">2021-2022</option>
+        <option value="2022-2023">2022-2023</option>
+         <option value="2023-2024">2023-2024</option>
+</select> 
+</div>
+<button onclick="year()">click me to display</button>
+<div id="display">  </div>
+
+<script src="dom.js">
+
+
+</script>
+</body>
+</html>
