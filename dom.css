@@ -1,0 +1,32 @@
+.flex{
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: aqua;
+}
+.child{
+    background-color: rgb(204, 12, 12);
+    width: 20vw;
+    height: 20vH;
+    color: azure;
+    text-align: center;
+    font-size: xx-large;
+    margin: 10px;
+}
+button{
+    background-color: blueviolet;
+    color: azure;
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+#time{
+    background-color: rgb(183, 55, 55);
+    color: azure;
+    padding: 10px;
+    width: 100px;
+}
