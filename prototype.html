@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Inheritance and Prototype</h1>
+    <h2>Q.1 Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using
+        parents prototype</h2>
+    <pre>ANSWER : let parent={
+            alot(){
+               console.log(`${this.fname} ${this.lname}`);
+           },
+           assign(fname,lname,id,dept){
+               this.fname=fname;
+               this.lname=lname;
+               this.id=id;
+               this.dept=dept;
+           }
+       }
+       let child=Object.create(parent);
+       child.assign("shahul","sk",102,"mba");
+       console.log(parent);
+       console.log(child);</pre>
+
+    <h2>Q.2 Write code to explain prototype chaining</h2>
+    <pre>ANSWER :
+                
+        let arr=[1,2,'s','d','r',4];
+        console.log(arr.__proto__);
+        console.log(arr.__proto__.__proto__);
+        console.log(arr.__proto__.__proto__.__proto__);
+    </pre>
+
+
+    <h2>Q.3 Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum
+        for multiple arrays</h2>
+    <pre>ANSWER : 
+            
+        let a=[1,2,3,4,5]
+
+        const AddSum = {
+         name: "EA16",
+         add : function(a){
+        let sum = 0;
+        for(let i = 0 ; i < a.length ; i++){
+            sum += a[i];
+        }console.log(sum);
+    }
+}
+    AddSum.add(a);
+        </pre>
+    <h2>Q.4Write a JavaScript function to retrieve all the names of object's own and inherited properties.
+    </h2>
+    <pre>ANSWER : 
+        
+        class Employee {
+  
+    constructor(name, empId){
+        this.name = name;
+        this.empId = empId;
+     }
+    }
+    class Manager extends Employee {
+        manages(){
+            console.log(`${this.name} with Employee Id ${this.empId} manages the operation`);
+        }
+       
+ }
+    
+         const rathore = new Manager("rathore",101);
+        console.log(rathore);
+    </pre>
+    <script src="proto.js"></script>
+</body>
+
+</html>
